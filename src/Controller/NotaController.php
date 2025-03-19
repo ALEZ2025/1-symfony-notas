@@ -26,35 +26,7 @@ final class NotaController extends AbstractController
             'horaActual' => $horaActual->format('d/m/Y H:i'),
         ]);
     }
-
-            /*Se miran zumbando en ALR patrullando
-            Puro kamikaze y nomás el terror sembrando
-            De arriba p'abajo, ahí nos miran patrullando
-            Cero tolerancia pa'l que la ande cagando
-
-            Ya se las sabrita que no nos gustan las fallas
-            La gorra de lado y la glockson viene eclipsada
-            Con un toque bueno y a punta de carcajadas
-            Afirma pendientes, nunca se nos pasa nada
-            La santa protege si salimos a topones
-
-            Y al cien con los jefes, estamos a la puta orden
-            Pa morir nacimos, siempre estamos a la orden
-            Y uno de lavada si salimos a misiones
-            Y ahí nos ven pasar
-
-            Zumbando los Ranas por el bulevar
-            Y el aparato en mano y el tostón atrás
-            Y el mayor de los Ranas siempre al frente va
-            En uno y al tentón
-
-            Quedó comprobado la vez del jefe ratón
-            Que vamos de fresa, no tenemos compasión
-            A punta de tostonazos traíamos el boludón*/
-
-
-
-
+    
 
     #[Route('/nota/nueva', name: 'nota_nueva')]
     public function nueva(Request $request, EntityManagerInterface $em)
