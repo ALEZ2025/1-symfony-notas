@@ -1,0 +1,30 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Bloc de Notas{% endblock %}
+
+{% block body %}
+    <div class="encabezado-contenedor">
+    <h1>Bloc de Notas</h1>
+    <a href="{{ path('nota_nueva') }}" class="nueva-nota">Nueva Nota</a> <!-- Botón antes del título -->
+
+
+    <ul>
+        {%  for nota in notas %}
+            <ul class="card-list">
+                <li class="card">
+                    <span class="fecha">{{ nota.creadoEn | date('d/m/Y H:i') }}</span> <!-- Fecha en la esquina -->
+                    <strong class="titulo">{{ nota.titulo }}</strong> <!-- Título con margen superior -->
+
+                    <div class="contenido">{{ nota.contenido }}</div> <!-- Contenedor para el contenido -->
+                    <form action="{{ path('nota_eliminar', { id: nota.id }) }}" method="post">
+                        <button type="submit">Eliminar</button>
+                    </form>
+                </li>
+            </ul>
+
+
+
+        {% endfor %}
+    </ul>
+{% endblock %}

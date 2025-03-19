@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Nueva Nota</h1>
+    <form method="post">
+        <label for="titulo">Titulo</label>
+        <input type="text" id="titulo" name="titulo" placeholder="Ingrese el Título" required>
+
+        <label for="contenido">Contenido</label>
+        <textarea  id="contenido" name="contenido" placeholder="Ingrese Contenido" required></textarea>
+
+        <button type="submit">Guardar Nota</button>
+    </form>
+
+{% endblock %}
